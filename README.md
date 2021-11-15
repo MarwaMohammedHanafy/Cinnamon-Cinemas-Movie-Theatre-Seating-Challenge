@@ -25,3 +25,13 @@ I use TDD approach.
     * check if the number of seats requested is = 2, I will be allocated seats  A5,B1
 6. Assume seats from A1 to B3 have already been filled scenario
     * check if the number of seats requested is = 3, I will be allocated seats B4,B5,C1
+
+I divide the system into 2 component cinemaSeats  and cinemaBookingSystem 
+
+Components: -
+cinemaSeats Component’s public function: 
+* isSeatsAVailable
+* isAllSeatsAllocated
+cinemaBookingSystem Component’s public function: 
+* checkNumberOfRequest
+* RequestSeats
