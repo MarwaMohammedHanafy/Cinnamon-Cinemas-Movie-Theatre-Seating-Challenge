@@ -29,7 +29,7 @@ const isAllSeatsAllocated = (cinemaSeats) => {
 };
 /**
  * 
- * @param {*} numOfRequestedSeats 
+ * @param {Number} numOfRequestedSeats 
  * @returns {Boolean}
  */
 const checkNumberOfRequest = (numOfRequestedSeats) => {
@@ -37,17 +37,17 @@ const checkNumberOfRequest = (numOfRequestedSeats) => {
 };
 /**
  * 
- * @param {*} cinemaSeats 
- * @param {*} numOfRequestedSeats 
- * @returns 
+ * @param {Object} cinemaSeats 
+ * @param {Number} numOfRequestedSeats 
+ * @returns  {Object} newSeatsAllocation
  */
 const RequestSeats = (cinemaSeats,numOfRequestedSeats) => {
-  const newSeatsAllocation = {
-    "A": [1, 0, 0, 0, 0],
-    "B": [0, 0, 0, 0, 0],
-    "c": [0, 0, 0, 0, 0],
-  }; 
-  return newSeatsAllocation;
+
+  for ( let seat = 0 ; seat < numOfRequestedSeats ; seat++){
+    cinemaSeats["A"][seat] = 1;
+  }
+
+  return cinemaSeats;
 };
 module.exports = {
   isAllSeatsAVailable,

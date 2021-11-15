@@ -111,7 +111,7 @@ describe('Assume theatre is empty scenario', () => {
       "B": [0, 0, 0, 0, 0],
       "c": [0, 0, 0, 0, 0],
     };
-    const dummyRequestSeats = 1;
+    const dummyRequestSeats = 2;
     //act 
     const newSeatsAllocation = RequestSeats(dummyCinemaSeats, dummyRequestSeats);
     //assert
