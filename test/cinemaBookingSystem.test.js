@@ -3,7 +3,7 @@ const {
   isAllSeatsAllocated,
   checkNumberOfRequest,
   RequestSeats
-} = require('../src/cinema.js');
+} = require('../src/cinemaBookingSystem.js');
 
 describe('Check if all of the seats are avaliable for sale ', () => {
   test('check if return true if all seats available = 0 ', () => {
