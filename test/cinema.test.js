@@ -26,7 +26,7 @@ describe('Check if all of the seats are avaliable for sale ', () => {
     expect(allSeatsAvailable).toBe(false);
     });
 });
-describe('Check if all of the seats are avaliable for sale ', () => {
+describe('Check if all of the seats are Allocates', () => {
   test('check if return true if all seats Allocated = 1 ', () => {
   //arrange 
   const dummyCinemaSeats = {

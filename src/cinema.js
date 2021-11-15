@@ -13,7 +13,7 @@ const isAllSeatsAVailable = (cinemaSeats) => {
 return true;
 };
 const isAllSeatsAllocated = (cinemaSeats) => {
-
+  return true;
 };
 
 module.exports = {
