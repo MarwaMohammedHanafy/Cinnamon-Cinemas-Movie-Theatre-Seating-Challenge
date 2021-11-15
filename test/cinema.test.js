@@ -39,5 +39,17 @@ describe('Check if all of the seats are Allocates', () => {
   //assert
   expect(allSeatsAllocated).toBe(true);
   });
+  test('check if return false if there is  seat Available = 0 ', () => {
+    //arrange 
+    const dummyCinemaSeats = {
+      "A" : [1,1,1,1,1],
+      "B" : [1,1,1,0,1],
+      "c" : [1,1,1,1,1],
+    };
+    //act 
+    const allSeatsAllocated = isAllSeatsAllocated(dummyCinemaSeats);
+    //assert
+    expect(allSeatsAllocated).toBe(false);
+    });
 });
 
