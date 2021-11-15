@@ -125,4 +125,25 @@ describe('Assume theatre is empty scenario', () => {
   });
 
 });
+describe('Assume seats A1,A2,A3,A4 have already been filled scenario', () => {
+  test('check if the number of seats requested is = 2, I will be allocated the first seat A5,B1', () => {
+    //arrange 
+    const dummyCinemaSeats = {
+      "A": [1, 1, 1, 1, 0],
+      "B": [0, 0, 0, 0, 0],
+      "c": [0, 0, 0, 0, 0],
+    };
+    const dummyRequestSeats = 2;
+    //act 
+    const newSeatsAllocation = RequestSeats(dummyCinemaSeats, dummyRequestSeats);
+    //assert
+    expect(newSeatsAllocation).toStrictEqual(
+      {
+        "A": [1, 1, 1, 1, 1],
+        "B": [1, 0, 0, 0, 0],
+        "c": [0, 0, 0, 0, 0],
+      }
+    );
+  });
+});
 

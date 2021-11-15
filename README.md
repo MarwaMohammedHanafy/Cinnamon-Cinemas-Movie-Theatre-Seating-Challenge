@@ -21,3 +21,5 @@ I use TDD approach.
 4. Assume theatre is empty scenario
     * check if number of seats requested is = 1, I will be allocated the first seat A1.
     * check if number of seats requested is = 2, I will be allocated the 2 seats A1,A2.
+5. Assume seats A1,A2,A3,A4 have already been filled scenario
+    * check if the number of seats requested is = 2, I will be allocated the first seat A5,B1
