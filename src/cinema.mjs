@@ -4,7 +4,13 @@
  * @returns Boolean
  */
 const isAllSeatsAVailable = (cinemaSeats) => {
-  return true;
+  for (let row in cinemaSeats) {
+    for (let seat = 0; seat < cinemaSeats[row].length; seat++)
+      if (cinemaSeats[row][seat] == 1) {
+        return false;
+      }
+  }
+return true;
 };
 module.exports = {
   isAllSeatsAVailable,

@@ -7,3 +7,6 @@ cd cinnamon-cinemas-movie-theatre-seating-challenge
 To install dependencies: npm install 
 To Run the tests: npm test
 
+I use TDD approach. 
+1.  Check if all of the seats are avaliable for sale. 
+2.  
