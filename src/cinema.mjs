@@ -1,10 +1,11 @@
 
 /**
-
+ * 
+ * @returns Boolean
  */
-const IsAllSeatsAVailable = () => {
-
+const isAllSeatsAVailable = (cinemaSeats) => {
+  return true;
 };
 module.exports = {
-  IsAllSeatsAVailable,
+  isAllSeatsAVailable,
 };
