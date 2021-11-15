@@ -1,4 +1,4 @@
-const { isAllSeatsAVailable, isAllSeatsAllocated } = require('../src/cinema.js');
+const { isAllSeatsAVailable, isAllSeatsAllocated, checkNumberOfRequest } = require('../src/cinema.js');
 
 describe('Check if all of the seats are avaliable for sale ', () => {
   test('check if return true if all seats available = 0 ', () => {
@@ -51,5 +51,16 @@ describe('Check if all of the seats are Allocates', () => {
     //assert
     expect(allSeatsAllocated).toBe(false);
     });
+});
+
+describe('Check if number of seats requestes from 1 to 3 ', () => {
+  test('check if return true if number of seats requestes = 3 ', () => {
+  //arrange 
+  const dummyRequestSeats = 3;
+  //act 
+  const validrequest = checkNumberOfRequest(dummyRequestSeats);
+  //assert
+  expect(validrequest).toBe(true);
+  });
 });
 
