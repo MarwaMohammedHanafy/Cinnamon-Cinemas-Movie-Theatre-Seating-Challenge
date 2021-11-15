@@ -31,7 +31,17 @@ const isAllSeatsAllocated = (cinemaSeats) => {
  * @returns 
  */
 const createCinemaSeats = () => {
-
+    return {
+        seats: {
+            "A": [0, 0, 0, 0, 0],
+            "B": [0, 0, 0, 0, 0],
+            "C": [0, 0, 0, 0, 0],
+        },
+        firstAvailableSeat: {
+            row: "A",
+            col: 1,
+        }
+    };
 };
 
 /**

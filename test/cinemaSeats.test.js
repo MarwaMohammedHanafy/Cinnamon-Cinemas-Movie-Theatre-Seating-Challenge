@@ -10,7 +10,7 @@ describe('Check if create cinema correctly ', () => {
         //act 
         const newCinema = createCinemaSeats();
         //assert
-        expect(allSeatsAvailable).toStrictEqual(
+        expect(newCinema).toStrictEqual(
             {
                 seats: {
                     "A": [0, 0, 0, 0, 0],
