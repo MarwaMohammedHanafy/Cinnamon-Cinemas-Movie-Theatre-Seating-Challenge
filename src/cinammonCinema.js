@@ -1,12 +1,13 @@
-import cinemaBookingSystem from './cinemaBookingSystem.js';
-import cinemaSeats from './cinemaSeats';
+const cinemaBookingSystem = require('./cinemaBookingSystem.js');
+const cinemaSeats = require('./cinemaSeats.js');
+
 
 /**
  * 
  */
 const cinnamonCinemaBookingSystem = () => {
     const cinema = cinemaSeats.createCinemaSeats();
-    if (!isAllSeatsAVailable(cinema.seats)) {
+    if (!cinemaSeats.isAllSeatsAVailable(cinema.seats)) {
         console.log("Not All of the seats are available for sale when the program starts");
     } else {
         console.log("All of the seats are available for sale when the program starts");
@@ -21,14 +22,15 @@ const cinnamonCinemaBookingSystem = () => {
                 continue;
             }
             else {
-                cinema = cinemaBookingSystem.RequestSeats(cinema, numOfSeatsRequested);
+                cinemaBookingSystem.RequestSeats(cinema, numOfSeatsRequested);
                 console.log(cinema);
             }
         }
     }
-
+    return "All seats are Allocated, The program Finished"
 };
-export default {
-    cinnamonCinemaBookingSystem,
+
+module.exports = {
+    cinnamonCinemaBookingSystem
 };
 
