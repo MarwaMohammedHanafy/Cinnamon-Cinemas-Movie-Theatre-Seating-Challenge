@@ -33,6 +33,9 @@ return true;
  * @returns {Boolean}
  */
 const checkNumberOfRequest = (cinemaSeats) => {
+  if( cinemaSeats < 1){
+    return false ;
+  }
   return true;
 };
 module.exports = {
