@@ -26,7 +26,26 @@ const isAllSeatsAllocated = (cinemaSeats) => {
     }
     return true;
 };
+/**
+ * 
+ * @returns 
+ */
+const createCinemaSeats = () => {
+
+};
+
+/**
+ * 
+ * @param {*} cinemaSeats 
+ * @returns 
+ */
+const getNumOfSeatsAVailable = (cinemaSeats) => {
+
+};
+
 module.exports = {
     isAllSeatsAVailable,
     isAllSeatsAllocated,
+    createCinemaSeats,
+    getNumOfSeatsAVailable,
 };

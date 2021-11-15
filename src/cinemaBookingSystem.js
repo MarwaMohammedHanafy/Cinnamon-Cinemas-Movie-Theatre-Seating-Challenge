@@ -1,3 +1,4 @@
+
 /**
  * 
  * @param {Number} numOfRequestedSeats 
