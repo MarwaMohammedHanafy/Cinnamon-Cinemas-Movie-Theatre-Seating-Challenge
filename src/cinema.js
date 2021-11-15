@@ -29,14 +29,24 @@ const isAllSeatsAllocated = (cinemaSeats) => {
 };
 /**
  * 
- * @param {*} cinemaSeats 
+ * @param {*} numOfRequestedSeats 
  * @returns {Boolean}
  */
-const checkNumberOfRequest = (cinemaSeats) => {
-  return cinemaSeats >= 1 && cinemaSeats <= 3;
+const checkNumberOfRequest = (numOfRequestedSeats) => {
+  return numOfRequestedSeats >= 1 && numOfRequestedSeats <= 3;
+};
+/**
+ * 
+ * @param {*} cinemaSeats 
+ * @param {*} numOfRequestedSeats 
+ * @returns 
+ */
+const RequestSeats = (cinemaSeats,numOfRequestedSeats) => {
+
 };
 module.exports = {
   isAllSeatsAVailable,
   isAllSeatsAllocated,
   checkNumberOfRequest,
+  RequestSeats
 };
