@@ -33,7 +33,7 @@ return true;
  * @returns {Boolean}
  */
 const checkNumberOfRequest = (cinemaSeats) => {
-  if( cinemaSeats < 1){
+  if( cinemaSeats < 1 || cinemaSeats > 3){
     return false ;
   }
   return true;
