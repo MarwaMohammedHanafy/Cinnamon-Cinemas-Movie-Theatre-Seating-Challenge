@@ -62,5 +62,13 @@ describe('Check if number of seats requestes from 1 to 3 ', () => {
   //assert
   expect(validrequest).toBe(true);
   });
+  test('check if return false if number of seats requestes = 0', () => {
+    //arrange 
+    const dummyRequestSeats = 0;
+    //act 
+    const validrequest = checkNumberOfRequest(dummyRequestSeats);
+    //assert
+    expect(validrequest).toBe(false);
+    });
 });
 
