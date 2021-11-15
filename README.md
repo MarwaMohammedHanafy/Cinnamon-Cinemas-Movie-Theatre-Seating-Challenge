@@ -22,4 +22,6 @@ I use TDD approach.
     * check if number of seats requested is = 1, I will be allocated the first seat A1.
     * check if number of seats requested is = 2, I will be allocated the 2 seats A1,A2.
 5. Assume seats A1,A2,A3,A4 have already been filled scenario
-    * check if the number of seats requested is = 2, I will be allocated the first seat A5,B1
+    * check if the number of seats requested is = 2, I will be allocated seats  A5,B1
+6. Assume seats from A1 to B3 have already been filled scenario
+    * check if the number of seats requested is = 3, I will be allocated seats B4,B5,C1

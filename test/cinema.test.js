@@ -11,7 +11,7 @@ describe('Check if all of the seats are avaliable for sale ', () => {
     const dummyCinemaSeats = {
       "A": [0, 0, 0, 0, 0],
       "B": [0, 0, 0, 0, 0],
-      "c": [0, 0, 0, 0, 0],
+      "C": [0, 0, 0, 0, 0],
     };
     //act 
     const allSeatsAvailable = isAllSeatsAVailable(dummyCinemaSeats);
@@ -23,7 +23,7 @@ describe('Check if all of the seats are avaliable for sale ', () => {
     const dummyCinemaSeats = {
       "A": [0, 0, 0, 0, 0],
       "B": [0, 0, 1, 0, 0],
-      "c": [0, 0, 0, 0, 0],
+      "C": [0, 0, 0, 0, 0],
     };
     //act 
     const allSeatsAvailable = isAllSeatsAVailable(dummyCinemaSeats);
@@ -37,7 +37,7 @@ describe('Check if all of the seats are Allocates', () => {
     const dummyCinemaSeats = {
       "A": [1, 1, 1, 1, 1],
       "B": [1, 1, 1, 1, 1],
-      "c": [1, 1, 1, 1, 1],
+      "C": [1, 1, 1, 1, 1],
     };
     //act 
     const allSeatsAllocated = isAllSeatsAllocated(dummyCinemaSeats);
@@ -49,7 +49,7 @@ describe('Check if all of the seats are Allocates', () => {
     const dummyCinemaSeats = {
       "A": [1, 1, 1, 1, 1],
       "B": [1, 1, 1, 0, 1],
-      "c": [1, 1, 1, 1, 1],
+      "C": [1, 1, 1, 1, 1],
     };
     //act 
     const allSeatsAllocated = isAllSeatsAllocated(dummyCinemaSeats);
@@ -91,7 +91,7 @@ describe('Assume theatre is empty scenario', () => {
       seats: {
         "A": [0, 0, 0, 0, 0],
         "B": [0, 0, 0, 0, 0],
-        "c": [0, 0, 0, 0, 0],
+        "C": [0, 0, 0, 0, 0],
       },
       firstAvailableSeat: {
         row: "A",
@@ -107,7 +107,7 @@ describe('Assume theatre is empty scenario', () => {
         seats: {
           "A": [1, 0, 0, 0, 0],
           "B": [0, 0, 0, 0, 0],
-          "c": [0, 0, 0, 0, 0],
+          "C": [0, 0, 0, 0, 0],
         },
         firstAvailableSeat: {
           row: "A",
@@ -122,7 +122,7 @@ describe('Assume theatre is empty scenario', () => {
       seats: {
         "A": [0, 0, 0, 0, 0],
         "B": [0, 0, 0, 0, 0],
-        "c": [0, 0, 0, 0, 0],
+        "C": [0, 0, 0, 0, 0],
       },
       firstAvailableSeat: {
         row: "A",
@@ -138,7 +138,7 @@ describe('Assume theatre is empty scenario', () => {
         seats: {
           "A": [1, 1, 0, 0, 0],
           "B": [0, 0, 0, 0, 0],
-          "c": [0, 0, 0, 0, 0],
+          "C": [0, 0, 0, 0, 0],
         },
         firstAvailableSeat: {
           row: "A",
@@ -156,7 +156,7 @@ describe('Assume seats A1,A2,A3,A4 have already been filled scenario', () => {
       seats: {
         "A": [1, 1, 1, 1, 0],
         "B": [0, 0, 0, 0, 0],
-        "c": [0, 0, 0, 0, 0],
+        "C": [0, 0, 0, 0, 0],
       },
       firstAvailableSeat: {
         row: "A",
@@ -173,10 +173,44 @@ describe('Assume seats A1,A2,A3,A4 have already been filled scenario', () => {
         seats: {
           "A": [1, 1, 1, 1, 1],
           "B": [1, 0, 0, 0, 0],
-          "c": [0, 0, 0, 0, 0],
+          "C": [0, 0, 0, 0, 0],
         },
         firstAvailableSeat: {
           row: "B",
+          col: 2,
+        }
+      }
+    );
+  });
+});
+describe('Assume seats from A1 to B3 have already been filled scenario', () => {
+  test('check if the number of seats requested is = 3, I will be allocated seats B4,B5,C1', () => {
+    //arrange 
+    const dummyCinema = {
+      seats: {
+        "A": [1, 1, 1, 1, 1],
+        "B": [1, 1, 1, 0 , 0],
+        "C": [0, 0, 0, 0, 0],
+      },
+      firstAvailableSeat: {
+        row: "B",
+        col: 4,
+      }
+    };
+
+    const dummyRequestSeats = 3;
+    //act 
+    const newSeatsAllocation = RequestSeats(dummyCinema, dummyRequestSeats);
+    //assert
+    expect(newSeatsAllocation).toStrictEqual(
+      {
+        seats: {
+          "A": [1, 1, 1, 1, 1],
+          "B": [1, 1, 1, 1, 1],
+          "C": [1, 0, 0, 0, 0],
+        },
+        firstAvailableSeat: {
+          row: "C",
           col: 2,
         }
       }
