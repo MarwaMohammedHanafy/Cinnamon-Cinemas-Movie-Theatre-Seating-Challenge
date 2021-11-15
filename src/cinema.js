@@ -11,7 +11,7 @@ const isAllSeatsAVailable = (cinemaSeats) => {
         return false;
       }
   }
-return true;
+  return true;
 };
 /**
  * 
@@ -25,7 +25,7 @@ const isAllSeatsAllocated = (cinemaSeats) => {
         return false;
       }
   }
-return true;
+  return true;
 };
 /**
  * 
@@ -33,10 +33,7 @@ return true;
  * @returns {Boolean}
  */
 const checkNumberOfRequest = (cinemaSeats) => {
-  if( cinemaSeats < 1 || cinemaSeats > 3){
-    return false ;
-  }
-  return true;
+  return cinemaSeats >= 1 && cinemaSeats <= 3;
 };
 module.exports = {
   isAllSeatsAVailable,
