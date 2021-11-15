@@ -54,7 +54,7 @@ describe('Check if all of the seats are Allocates', () => {
 });
 
 describe('Check if number of seats requestes from 1 to 3 ', () => {
-  test('check if return true if number of seats requestes = 3 ', () => {
+  test('check if return true if number of seats requestes = 3', () => {
   //arrange 
   const dummyRequestSeats = 3;
   //act 
