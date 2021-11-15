@@ -33,7 +33,7 @@ return true;
  * @returns {Boolean}
  */
 const checkNumberOfRequest = (cinemaSeats) => {
-
+  return true;
 };
 module.exports = {
   isAllSeatsAVailable,
