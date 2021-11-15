@@ -1,5 +1,4 @@
-const { isAllSeatsAVailable } = require('../src/cinema.mjs');
-
+const { isAllSeatsAVailable, isAllSeatsAllocated } = require('../src/cinema.js');
 
 describe('Check if all of the seats are avaliable for sale ', () => {
   test('check if return true if all seats available = 0 ', () => {
@@ -26,5 +25,19 @@ describe('Check if all of the seats are avaliable for sale ', () => {
     //assert
     expect(allSeatsAvailable).toBe(false);
     });
+});
+describe('Check if all of the seats are avaliable for sale ', () => {
+  test('check if return true if all seats Allocated = 1 ', () => {
+  //arrange 
+  const dummyCinemaSeats = {
+    "A" : [1,1,1,1,1],
+    "B" : [1,1,1,1,1],
+    "c" : [1,1,1,1,1],
+  };
+  //act 
+  const allSeatsAllocated = isAllSeatsAllocated(dummyCinemaSeats);
+  //assert
+  expect(allSeatsAllocated).toBe(true);
+  });
 });
 

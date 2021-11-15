@@ -12,6 +12,11 @@ const isAllSeatsAVailable = (cinemaSeats) => {
   }
 return true;
 };
+const isAllSeatsAllocated = (cinemaSeats) => {
+
+};
+
 module.exports = {
   isAllSeatsAVailable,
+  isAllSeatsAllocated,
 };
