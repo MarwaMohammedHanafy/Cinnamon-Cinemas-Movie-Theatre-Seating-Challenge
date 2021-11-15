@@ -42,7 +42,12 @@ const checkNumberOfRequest = (numOfRequestedSeats) => {
  * @returns 
  */
 const RequestSeats = (cinemaSeats,numOfRequestedSeats) => {
-
+  const newSeatsAllocation = {
+    "A": [1, 0, 0, 0, 0],
+    "B": [0, 0, 0, 0, 0],
+    "c": [0, 0, 0, 0, 0],
+  }; 
+  return newSeatsAllocation;
 };
 module.exports = {
   isAllSeatsAVailable,
