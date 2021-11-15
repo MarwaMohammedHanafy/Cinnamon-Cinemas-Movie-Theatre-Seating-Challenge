@@ -50,7 +50,14 @@ const createCinemaSeats = () => {
  * @returns 
  */
 const getNumOfSeatsAVailable = (cinemaSeats) => {
-
+    let count = 0;
+    for (let row in cinemaSeats) {
+        for (let seat = 0; seat < cinemaSeats[row].length; seat++)
+            if (cinemaSeats[row][seat] == 0) {
+                count++;
+            }
+    }
+    return count;
 };
 
 module.exports = {

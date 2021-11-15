@@ -2,7 +2,25 @@ const {
     isAllSeatsAVailable,
     isAllSeatsAllocated,
     createCinemaSeats,
+    getNumOfSeatsAVailable,
 } = require('../src/cinemaSeats.js');
+
+describe('Check number of available seats  ', () => {
+    test('return 3 if only 3 seats left ', () => {
+        //arrange
+        const dummySeats = {
+            "A": [1, 1, 1, 1, 1],
+            "B": [1, 1, 1, 1, 1],
+            "C": [1, 1, 0, 0, 0],
+        }
+        //act 
+        const numOfAvailableSeats = getNumOfSeatsAVailable(dummySeats);
+        //assert
+        expect(numOfAvailableSeats).toBe(3);
+    });
+
+});
+
 
 describe('Check if create cinema correctly ', () => {
     test('check if return a cinema object with empty seats ', () => {

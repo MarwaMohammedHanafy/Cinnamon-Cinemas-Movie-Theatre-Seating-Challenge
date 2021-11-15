@@ -11,6 +11,7 @@ I use TDD approach.
 1.  Check if all of the seats are avaliable for sale.
     * check if return true if all seats available
     * check if return false if one seat is not available
+    * Check if create cinema correctly
 2. Check if all of the seats are Allocates
     * check if return true if all seats Allocated
     * check if return false if there is  seat Available
